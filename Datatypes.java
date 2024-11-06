@@ -135,7 +135,7 @@ public class Datatypes{
      System.out.println(female);
      char alphabet='h';
      System.out.println(alphabet);
-     char section='D';
+     char section='d';
      System.out.println(section);
  }
 }
