@@ -1,0 +1,236 @@
+Variables & Datatypes:
+
+1.Variables:variables is a container to store the values.
+  Syntax:
+        datatype variable=value;
+  ex:
+    int price=20;
+
+2.List of Datatypes:
+  a.byte:it is from -128-127.
+    ex:
+      byte marks=90;
+  b.short:it is 2 byte of values can be used.
+    ex:
+      short rivers=350;
+      
+  c.int:it is 4byte values can be stored.
+    ex:
+      int salary=30000;
+  d.float:only floating values can be used and these are end with f.
+    ex:
+     float height=4.5f;
+      
+  e.double:decimal values can be stored and is end with d.
+    ex:
+      double velocity=45.56d;
+  f.long: it can stored 8 byte values.
+    ex:
+       long phone_no=2344565667l;
+  g.char:single character is used and denoted by the symbol is ''.
+    ex:
+       char block='A';
+  h.boolean:we can use only true or false
+    ex:
+       boolean isRightPerson=true;
+
+3.Primitive Datatype:are Inbuilt datatype and these are already present in system.
+  ex:
+     int rate=1000;
+     long aadhar_no=12344567653l;
+  Non-Primitive Datatypes:these are user friendly datatypes.
+  ex:
+     String name="Poorvika";
+
+4.int x = 10;
+double y = x;
+System.out.println(y);
+
+Output:
+y=10.
+
+5. default value of uninstalised integer is 0.
+   default value of uninstalised boolean is false.
+
+Methods and Return types:
+
+1.Methods:it is a block of code executed whenever it is called.
+  Purpose:whenever we want to reuse this code.
+  ex:
+    public class Environment{
+      public static void main(String[] args){
+      nature();
+       
+      public static void nature(){
+      System.out.println("nature is god gift");
+      }
+   }
+2.public class Addition{
+  public static void main(String[] args){
+  
+  int result=sum(int a,int b);
+  int value=sum(result);
+  System.out.println(value);
+
+
+
+  public static int sum(int a,int b){
+  int summation=a+b;
+  return a+b;
+  }
+}
+3.Two Types of Methods:
+  void:it returns nothing.
+  ex: 
+    public class substraction{
+      public static void main(String[] args){
+      nature();
+       
+      public static void nature(){
+      System.out.println("nature is god gift");
+      }
+  non-void:in that we can use any datatypes and then return statement is compulsory.
+  ex:
+    public class Addition{
+       public static void main(String[] args){
+  
+       int result=sum(int a,int b);
+       int value=sum(result);
+       System.out.println(value);
+
+
+
+    public static int sum(int a,int b){
+    int summation=a+b;
+    return a+b;
+  }
+}
+4.public class Test {
+    public static void main(String[] args) {
+        System.out.println(getValue());
+    }
+
+    static int getValue() {
+        return 20;
+    }
+}
+Output:
+20.
+
+
+Parameters and Pass-By-value:
+
+1.Parameters:Variables declared in methods.
+  Use:to give inputs to the methods.
+3.public class Test {
+    public static void modify(int a, int[] arr) {
+        a = a + 5;
+        arr[0] = arr[0] + 5;
+        System.out.println("Inside modify method: a = " + a + ", arr[0] = " + arr[0]);
+    }
+
+    public static void main(String[] args) {
+        int num = 10;
+        int[] numbers = {20, 30, 40};
+
+        modify(num, numbers);
+        System.out.println("After modify method: num = " + num + ", numbers[0] = " + numbers[0]);
+    }
+}
+
+Output:
+30
+40
+50.
+4
+
+4. The methods can give multiple values.How means using same method name with different variable name.
+
+Arrays:
+
+1.Array:group of elements have similar in types.
+  It is different from normal variable from these characters:
+  a.arrays are denoted by square brackets.
+  b.It uses index to store the values.
+  c.index value start from 0.
+2. Declaration and Intialization of array with example:
+   public class Array{ 
+   public static void main(String[] args){
+    
+   int[] marks={28,35,49,75,80,90}
+   System.out.println(marks[0]);
+   }
+}
+3.To Find maximum elements in array
+
+public class Elements{
+  public static void main(String[] args){
+  
+  int[] price=new int[i];
+  for(int i=0;i<arr.length[i];i++)
+  System.out.println([i]);
+
+public static int max(int[] a,int inputs){
+a=int[i];
+Maximum=i+a;
+System.out.println(Maximum);
+}
+}
+4.public class ArrayExample {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        System.out.println(arr[2]);
+    }
+}
+Output:
+3
+5.Reverse an array
+
+public class Reverse{
+ public static void main(String[] args){
+ int[] marks={23,45,75,83,45,78,98}
+ 
+for(int i=7;i>=0;i--){
+System.out.println(marks[i])
+}
+}
+
+find output
+
+1.public class Test {
+    public static int calculate(int a, int b) {
+        return a + b * 2;
+    }
+    public static void main(String[] args) {
+        System.out.println(calculate(2, 3));
+    }
+}
+output:
+10
+
+2.public class LoopTest {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        for (int i = 0; i < arr.length; i += 2) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+output:
+3
+4
+5
+6
+7
+
+3.
+
+ 
+
+  
+  
+
+    
+
+
+   
