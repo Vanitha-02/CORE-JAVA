@@ -1,0 +1,257 @@
+1.Class:It is a blueprint for object.
+class is represented by brackets().
+Object:real world entity.
+Object has States and Behaviours.
+objects are stored in instance memory.
+
+
+2.Constructor:A block of code is executed whenever object is created.
+Method:method is block of code is executed whenever it is called.
+
+3.Types of constructor:
+ a.default constructor:In default constructor compiler will give the constructor.
+ b.parameterised constructor:when we can use parameterised constructor we give a name to the constructor with parameters.
+ c.no-parameterised constructor:when we can use parameterised constructor we give a name to the constructor with no-parameters.
+
+4.Constructor is private,When we have create class as a private.Then private class is accessed within the class means only inside the class.
+then we have use private as a constructor.
+
+5.Aggregation:whatever is in it has a relation then it called it as Aggregation/Association.
+Example:                                                                                                    Inside patient class we create disease class
+Hospital Has a                                                                                            
+1) Class Hospital               2)Class Department     3)Class Doctor               4)Class Patient          5)Class Disease    6)Class Address   7)Class Runner
+    String Hospital name            String name;          String name                    String name            String name       int pincode       we can access all
+    Department department          int id;               String Specialization           Disease disease                                            the classes inside
+    String ceoName                                                                       int age                                                    runner class.
+     Doctor doctor
+     Patient patient
+     Disease disease
+     Address address
+
+6.Inheritance:Child class is aquiring all the features of parent class it is called it as Inheritance.
+  it has two types of relations:
+   A.is a relation.
+   B.Has a relation.
+When to use:
+when means child can access all the properties of parent then we have to use "Is a relation".
+When we have to associate or aggregate things then we have to use "Has a relation".
+
+8.Use of super keyword:Parent class is named as super class.
+It is used to represent parent class we have to use "super" keyword.
+
+9.Why:multiple inheritance has two parent class.in the rule of inheritance one child class is aquire the features of one parent class.
+Thats why it does not support to multiple inheritance with classes.
+
+10.Static Variabes:Single copy of static variables which is shared among for all the variables.
+Static variables is represented by static keyword.
+Static variables is accessed by using classname.
+
+Instance variable is represented by normal variable.
+Instance variable is accessed by using Object reference name.
+
+7.Inheritance types:
+   It has two types of relations:
+    a.Is a Relation.
+    b.Has a relation.
+a.Is a relation has 4 types:
+   Single Inheritance
+   Multilevel Inheritance
+   Multiple Inheritance
+   Hierarchikal Inheritance
+   Hybrid Inheritance
+
+11.Static Variables:
+Static variables are stored in constant pool.
+Static variables are stored by using ClassName.
+
+12.Static block:To intialise the static variable we use static block.
+Static block is executed before main method is executed.
+
+13.we can create multiple static blocks.when we create multiple static blocks they executed before the main method is executed.
+
+14.Use:To intialise the static variables we use static blocks.
+ The main use of static block is executed before main method is executed .
+
+15.to How to access the variables and methods we have to use Static in main method.
+Static is Non-Access Modifier.
+Because Access all the variables and method in  main method.
+
+Find Output:
+
+1.
+class Test {
+    int num = 5;
+
+    void modify(Test obj) {
+        obj.num += 10;
+    }
+
+    public static void main(String[] args) {
+        Test t1 = new Test();
+        t1.modify(t1);
+        System.out.println("Value: " + t1.num);
+    }
+}
+
+Output:
+15.
+
+3.
+class CPU {
+    int cores = 4;
+}
+
+class Computer {
+    CPU cpu = new CPU();
+
+    void showSpecs() {
+        System.out.println("Cores: " + cpu.cores);
+    }
+
+    public static void main(String[] args) {
+        Computer c1 = new Computer();
+        Computer c2 = new Computer();
+        c1.cpu.cores = 8;
+        c1.showSpecs();
+        c2.showSpecs();
+}
+}
+Output:
+Cores:8
+Cores:4
+Cores:8
+
+4.
+class Alpha {
+    private int x = 10;
+    protected int y = 20;
+
+    int getX() {
+        return x;
+    }
+}
+
+public class Beta extends Alpha {
+    public static void main(String[] args) {
+        Beta b = new Beta();
+        // System.out.println(b.x); // Not allowed
+        System.out.println(b.getX());
+        System.out.println(b.y);
+    }
+}
+Output:
+10
+20
+
+5.
+class Parent {
+    static void show() {
+        System.out.println("Parent static");
+    }
+}
+
+class Child extends Parent {
+    static void show() {
+        System.out.println("Child static");
+    }
+
+    public static void main(String[] args) {
+        Parent p = new Child();
+        p.show();
+    }
+}
+
+Output:
+Error:Doesn't access static methods
+or
+Error:static methods access by using Class name.
+
+6.
+class Counter {
+    static int count = 0;
+
+    Counter() {
+        count++;
+    }
+
+    public static void main(String[] args) {
+        Counter c1 = new Counter();
+        Counter c2 = new Counter();
+        Counter c3 = new Counter();
+        System.out.println(Counter.count);
+    }
+}
+
+Output:
+0
+1
+2
+
+7.
+class Init {
+    static int val;
+
+    static {
+        val = 50;
+        System.out.println("Static block executed");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Value: " + val);
+    }
+}
+
+Output:
+Value:50
+Static block executed
+
+8.
+class Animal {
+    void move() {
+        System.out.println("Animal moves");
+    }
+}
+
+class Dog extends Animal {
+    void move() {
+        System.out.println("Dog runs");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Animal a = new Dog();
+        a.move();
+    }
+Output:
+Error:Constructor is created by same class name:Animal has differen class and Dog has different class.
+
+2.
+class Example {
+    int a;
+
+    Example() {
+        this(100);
+        System.out.println("Default Constructor");
+    }
+
+    Example(int x) {
+        a = x;
+        System.out.println("Parameterized Constructor: " + a);
+    }
+
+    public static void main(String[] args) {
+        Example e = new Example();
+    }
+}
+
+Output:
+Parameterized Constructor:x.
+
+
+
+
+
+
+     
+
